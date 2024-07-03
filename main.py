@@ -6,6 +6,7 @@ from src.FoodOrderPrediction.pipeline.stage_02_dataValidation import DataValidat
 from src.FoodOrderPrediction.pipeline.stage_03_dataTransformation import DataTransformationPipeline
 from src.FoodOrderPrediction.Exception.custom_exception import CustomException
 from src.FoodOrderPrediction.pipeline.stage_04_modelTraining import ModelTrainingPipeline
+from src.FoodOrderPrediction.pipeline.stage_05_modelEvaluation import ModelEvaluationPipeline
 
 
 
@@ -54,5 +55,16 @@ try:
     logger.info(f'--------------------stage {STAGE_NAME} started---------------------')
     model_training_obj = ModelTrainingPipeline()
     model_training_obj.main()
+except Exception as e:
+    raise CustomException(e, sys)
+
+
+
+STAGE_NAME = 'Model Evaluation Stage'
+
+try:
+    logger.info(f'---------------stage {STAGE_NAME} started---------------------')
+    model_evaluation_obj = ModelEvaluationPipeline()
+    model_evaluation_obj.main()
 except Exception as e:
     raise CustomException(e, sys)

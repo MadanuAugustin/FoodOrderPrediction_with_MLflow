@@ -55,3 +55,13 @@ model_trainer :
   test_data_path : artifacts//data_transformation//transformed_test_df.csv
   # we can also save the model as pickle format
   model_name : model.joblib
+
+
+#################################### MODEL-EVALUATION-CONFIGURATION ################################
+
+
+model_evaluation : 
+  root_dir : artifacts//model_evaluation
+  test_data_path : artifacts//data_transformation//transformed_test_df.csv
+  model_path : artifacts//model_trainer//model.joblib
+  metric_file_name : artifacts//model_evaluation//metrics.json
