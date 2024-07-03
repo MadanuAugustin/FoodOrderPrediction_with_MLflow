@@ -1,0 +1,25 @@
+
+
+
+# yaml files should not be empty which throws an error
+# schema is nothing but how many columns our data is having and its data types and column names
+
+
+COLUMNS : 
+  Age                         :    int64
+  Gender                      :   object
+  Marital Status              :   object
+  Occupation                  :   object
+  Monthly Income              :   object
+  Educational Qualifications  :   object
+  Family size                 :    int64
+  latitude                    :  float64
+  longitude                   :  float64
+  Pin code                    :    int64
+  Output                      :   object
+  Feedback                    :   object
+  unknow_column               :    object
+
+
+TARGET_COLUMN :
+  name :   Target

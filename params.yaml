@@ -1,0 +1,11 @@
+
+
+
+
+
+
+RandomForestClassifier:
+  n_estimators : 100
+  criterion : 'gini'
+  max_depth : None
+  n_jobs : 1
