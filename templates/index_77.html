@@ -10,9 +10,8 @@
 
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #1e1e2f;
-            /* Dark purple background */
-            color: #f8f8f8;
+            background-color: #0d1117;
+            color: #f0f0f0;
             margin: 0;
             padding: 0;
         }
@@ -21,17 +20,14 @@
             max-width: 400px;
             margin: 50px auto;
             padding: 20px;
-            background-color: #2b2b3d;
-            /* Slightly lighter dark purple */
-            box-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
-            /* Pink shadow */
+            background-color: #21262d; /* Slightly lighter dark color */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             border-radius: 5px;
         }
 
         h1 {
             text-align: center;
-            color: #ffd700;
-            /* Gold color */
+            color: #f0f0f0; /* Light blue color */
             font-size: 28px;
             font-weight: 700;
         }
@@ -47,46 +43,39 @@
         label {
             display: block;
             margin-bottom: 5px;
-            color: #ffd700;
-            /* Gold color */
+            color: #f0f0f0; /* Light blue color */
             font-weight: bold;
             font-size: 16px;
         }
 
         .form-control {
             width: 100%;
-            padding: 12px;
-            /* Adjusted padding */
+            padding: 10px;
             box-sizing: border-box;
-            border: 1px solid #404040;
+            border: 1px solid #30363d;
             border-radius: 4px;
-            background-color: #33334d;
-            /* Soft purple background */
-            color: #f8f8f8;
+            background-color: #273549; /* Soft cool blue background */
+            color: #c9d1d9;
             font-size: 14px;
         }
 
         .form-control::placeholder {
-            color: #b8b8d4;
+            color: #8b949e;
         }
 
         .form-control:focus {
-            border-color: #ff69b4;
-            /* Pink border on focus */
+            border-color: #58a6ff;
             outline: none;
-            background-color: #2a2a3d;
-            /* Darker purple background on focus */
+            background-color: #1a2b3c; /* Darker blue background on focus */
         }
 
         select.form-control,
         input.form-control {
-            height: auto;
-            /* Adjusted height to auto */
+            height: 34px;
         }
 
         .btn-primary {
-            background-color: #ff69b4;
-            /* Pink button */
+            background-color: #58a6ff;
             color: #fff;
             border: none;
             padding: 10px 15px;
@@ -98,15 +87,13 @@
         }
 
         .btn-primary:hover {
-            background-color: #e75480;
-            /* Darker pink on hover */
+            background-color: #1e6fb8;
         }
 
         h2 {
             text-align: center;
             margin-top: 20px;
-            color: #ffd700;
-            /* Gold color */
+            color: #f0f0f0; /* White color */
             font-size: 22px;
             font-weight: 700;
         }
@@ -118,9 +105,12 @@
         <h1>Customer Online Order Prediction</h1>
 
         <form action="{{ url_for('predict_datapoint')}}" method="post">
+
+
             <div class="mb-3">
                 <label class="form-label">Age</label>
-                <input class="form-control" type="number" name="Age" placeholder="Enter your age" min='0' max='100' />
+                <input class="form-control" type="number" name="Age" placeholder="Enter your age"
+                    min='0' max='100' />
             </div>
 
             <div class="mb-3">
@@ -137,15 +127,16 @@
 
             <div class="mb-3">
                 <label class="form-label">Family size</label>
-                <input class="form-control" type="number" name="family_size" placeholder="Enter family size" min='0'
-                    max='6' />
+                <input class="form-control" type="number" name="family_size" placeholder="Enter family size"
+                    min='0' max='6' />
             </div>
 
             <div class="mb-3">
                 <label class="form-label">Enter area pincode- ranage(560001-560110)</label>
-                <input class="form-control" type="number" name="pincode" placeholder="Enter pincode" min='560001'
-                    max='560110' />
+                <input class="form-control" type="number" name="pincode" placeholder="Enter pincode"
+                    min='560001' max='560110' />
             </div>
+
 
             <div class="mb-3">
                 <label class="form-label">Gender</label>
@@ -176,6 +167,7 @@
                     <option value="House wife">House wife</option>
                 </select>
             </div>
+
 
             <div class="mb-3">
                 <label class="form-label">Feedback</label>
